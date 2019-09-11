@@ -1,0 +1,108 @@
+.tasks {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #707070;
+  margin-bottom: 2em;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 1em 2em;
+}
+
+h3 {
+  flex: 2;
+}
+
+p {
+  flex: 1;
+}
+
+/* task types */
+.task-type {
+  font-weight: bold;
+  padding: 0.5em 1em;
+  color: #fff;
+  border-radius: 25px;
+  flex: 0;
+  margin-right: 0.5em;
+  transition: 0.5s all ease-out;
+  text-transform: capitalize;
+}
+.personal-task {
+  background: #90caf9;
+}
+.work-task {
+  background: #ce93d8;
+}
+
+/* interaction buttons */
+
+/* checkbox interactions */
+.checkbox {
+  border: 2px solid #707070;
+  padding: 0.75em;
+  margin-right: 1em;
+  color: #2ecc40;
+  cursor: pointer;
+}
+.checkbox:hover {
+  background: #707070;
+}
+
+.complete {
+  border: 2px solid #2ecc40;
+  background: #2ecc40;
+}
+
+/* update / delete interactions */
+.task-update {
+  cursor: pointer;
+  border: 1px solid #4db6ac;
+  color: #4db6ac;
+}
+
+.task-update:hover {
+  background: #4db6ac;
+  color: #fff;
+}
+
+.task-delete {
+  background: #ef5350;
+  cursor: pointer;
+}
+
+.task-delete:hover {
+  background: #d32f2f;
+  color: #fff;
+}
+
+input {
+  margin: 0 1em;
+}
+
+select {
+  margin: 0 1em;
+}
+
+/* duration editting styling */
+form {
+  display: flex;
+}
+
+form > input {
+  margin: 0;
+  width: 30px;
+}
+
+form > select {
+  margin: 0;
+}
+
+.task-complete {
+  text-decoration: line-through;
+  color: #e8e8e8;
+}

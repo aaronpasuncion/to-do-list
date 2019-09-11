@@ -1,0 +1,17 @@
+.add-task {
+  cursor: pointer;
+  border: 2px solid #fe9241;
+  color: #fe9241;
+  font-weight: bold;
+  padding: 0.5em;
+  margin: 1.25em 0;
+  transition: all 0.5s ease-out;
+}
+
+.add-task:hover {
+  background: #fe9241;
+  color: #fff;
+}
+
+.update-task {
+}
