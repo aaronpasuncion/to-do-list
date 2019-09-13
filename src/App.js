@@ -84,7 +84,6 @@ class App extends Component {
       }
       const editedTask = tasks => (tasks.taskID === task.taskID ? task : tasks);
       const updatedTasks = this.state.tasks.filter(editedTask);
-      console.log(updatedTasks.length);
       return {
         tasks: updatedTasks,
         error: errorCheck,
@@ -101,7 +100,6 @@ class App extends Component {
     this.setState(prevState => {
       const { tasks } = prevState;
       tasks[id].isUpdating = false;
-      console.log(tasks);
       return {
         tasks: tasks,
         error: "",
@@ -117,7 +115,6 @@ class App extends Component {
     // take tasks length and add 1 to the id
     this.setState(prevState => {
       const { tasks } = prevState;
-      console.log(tasks);
       const newTask = {
         task: "---new task---",
         duration: "0 min",
@@ -128,7 +125,6 @@ class App extends Component {
       };
 
       const combineTasks = [...curTasks, newTask];
-      console.log(newTask);
       return {
         tasks: combineTasks
       };
@@ -142,7 +138,6 @@ class App extends Component {
       task.isComplete = tasks[task.taskID].isComplete ? false : true;
       const udpatedTask = item => (item.id === task.id ? task : item);
       const updatedList = this.state.tasks.filter(udpatedTask);
-      console.log(updatedList);
       return {
         tasks: updatedList
       };
@@ -153,13 +148,11 @@ class App extends Component {
 
   // sets the task title
   updateTask(e) {
-    console.log(e.target.value);
     this.setState({ updatedTask: e.target.value });
   }
 
   // listens for changes regarding the task type(personal/work)
   onTypeChange(e) {
-    console.log(e.target.value);
     this.setState({ taskType: e.target.value });
   }
 
@@ -170,7 +163,6 @@ class App extends Component {
 
   // sets the taskDurationType ("min/hr")
   taskDurationType(e) {
-    console.log(e.target.value);
     this.setState({ durationType: e.target.value });
   }
 
