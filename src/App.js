@@ -178,10 +178,7 @@ class App extends Component {
         error
       } = prevState;
 
-      // setting the task title
-      task.task = updatedTask === "" ? task.task : updatedTask;
       // setting the task duration
-
       // validation to see if the user entered a numeric time duration
       const errorCheck =
         taskPeriod === ""
@@ -200,6 +197,13 @@ class App extends Component {
           ? task.duration
           : `${taskPeriod + " " + typeCheck}`;
 
+      // setting the task title
+      task.task =
+        errorCheck !== ""
+          ? tasks[task.taskID].task
+          : task.updatedTask === ""
+          ? task.task
+          : updatedTask;
       // setting the task type (work/personal)
       task.type = taskType === "" ? task.type : taskType;
       // filter through the tasks to locate the current task you are editting and filter it out with the editted version
